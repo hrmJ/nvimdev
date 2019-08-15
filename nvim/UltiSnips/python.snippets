@@ -1,0 +1,16 @@
+snippet foreignkey "ForeignKey with helptext etc" b
+${1:FIELDNAME} = models.ForeignKey(${2:MODEL_TO_BE_REFERENCED}, helptext='$3', related_name='$4', on_delete=models.CASCADE)
+endsnippet
+
+snippet serializer "a basic modelserializer for django REST"
+from rest_framework import serializers
+
+class ${1:MODELNAME}Serializer(serializers.ModelSerializer):
+
+  ${2:FIELD_DEFINITIONS}
+
+  class Meta:
+      model = ${3:MODEL}
+      fields = ('$4', )
+
+endsnippet

@@ -1,0 +1,9 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "python", "json", "sass", "scss", "cucumber", "python.django"],
+	"eslint.options": {"eslint.autoFixOnSave": true},
+  "python.formatting.provider": "yapf",
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": true,
+  "tsserver.npm": "/home/developer/.nvm/versions/node/v10.16.2/bin/npm"
+}
