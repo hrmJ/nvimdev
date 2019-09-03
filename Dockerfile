@@ -75,6 +75,20 @@ RUN echo "set -o vi" >> "/home/$DOCKER_USER/.bashrc"
 
 COPY scripts "/home/$DOCKER_USER/scripts"
 
+# Install ripgrep
+RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+RUN sudo dpkg -i ripgrep_11.0.2_amd64.deb
+# RUN fzf's installation script
+RUN sudo bash scripts/fzf_install.sh 
+RUN curl -LO https://github.com/sharkdp/fd/releases/download/v7.3.0/fd-musl_7.3.0_amd64.deb
+RUN sudo dpkg -i fd-musl_7.3.0_amd64.deb
+RUN export FZF_DEFAULT_COMMAND="fd . $HOME"
+RUN export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+RUN export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+
+#RUN ~/.vim/bundle/fzf.vim/install --bin
+#RUN git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
+
 
 # ADDING R-related stufff
 

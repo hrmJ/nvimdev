@@ -33,6 +33,7 @@ Plugin 'easymotion/vim-easymotion'
 " search 
 
 Plugin 'vim-scripts/sherlock.vim'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'wincent/ferret'
 
