@@ -1,80 +1,38 @@
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-
-
-" python dev
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'nvie/vim-flake8'
-" Plugin 'JarrodCTaylor/vim-python-test-runner'
-" Plugin 'heavenshell/vim-pydocstring'
-" Plugin 'tweekmonster/django-plus.vim'
-
-
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 " file navigation 
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " moving / typing
-
-Plugin 'justinmk/vim-sneak' " (map s to 2-char quick search)
-Plugin 'tpope/vim-surround'
-Plugin 'Raimondi/delimitMate' " (Automatically close brackets etc)
-Plugin 'easymotion/vim-easymotion'
-
+Plug 'justinmk/vim-sneak' " (map s to 2-char quick search)
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate' " (Automatically close brackets etc)
+Plug 'easymotion/vim-easymotion'
 " search 
-
-Plugin 'vim-scripts/sherlock.vim'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'wincent/ferret'
-
+Plug 'vim-scripts/sherlock.vim'
+Plug 'wincent/ferret'
 " javascript / webdev
-
-Plugin 'neoclide/coc.nvim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'Galooshi/vim-import-js'
-Plugin 'mattn/emmet-vim'
-Plugin 'janko/vim-test'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'heavenshell/vim-jsdoc'
-
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'Galooshi/vim-import-js'
+Plug 'mattn/emmet-vim'
+Plug 'janko/vim-test'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'heavenshell/vim-jsdoc'
 " vim's look  and interface
-
-Plugin 'vim-airline/vim-airline'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'mhartington/oceanic-next'
-Plugin 'arcticicestudio/nord-vim'
-
-
-" writing
-
-Plugin 'vim-voom/VOoM'
-Plugin 'junegunn/goyo.vim'
-Plugin 'dhruvasagar/vim-table-mode'
-
+Plug 'vim-airline/vim-airline'
+Plug 'tomasiser/vim-code-dark'
+Plug 'mhartington/oceanic-next'
+Plug 'arcticicestudio/nord-vim'
 " git:
-Plugin 'tpope/vim-fugitive'
-" r
-Plugin 'jalvesaq/Nvim-R'
-
-
+Plug 'tpope/vim-fugitive'
 " Other / system
+Plug 'skywind3000/asyncrun.vim'
+Plug 'mhinz/vim-signify'
 
-Plugin 'skywind3000/asyncrun.vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'chamindra/marvim' " (Saving macros)
-
-
-call vundle#end()          
-filetype plugin indent on  
+call plug#end()
