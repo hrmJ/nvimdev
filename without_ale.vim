@@ -34,6 +34,6 @@ Plug 'tpope/vim-fugitive'
 " Other / system
 Plug 'skywind3000/asyncrun.vim'
 Plug 'mhinz/vim-signify'
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 call plug#end()
