@@ -67,6 +67,8 @@ RUN sudo chmod +x /usr/local/bin/launch.sh
 
 #PHP development
 
+RUN yarn global add prettier @prettier/plugin-php
+
 RUN sudo apt update && sudo apt install -y php7.2 curl php-cli php-mbstring git unzip php-xml
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
@@ -86,6 +88,7 @@ RUN sudo apt update && sudo apt install -y php-ast
 RUN sudo apt update && sudo apt install -y php7.2-dev php-pear
 RUN sudo pecl install ast
 RUN sudo phpenmod ast
+RUN sudo npm install --global prettier @prettier/plugin-php
 
 #COPY without_ale.vim /home/developer/.config/nvim/plugins.vim
 

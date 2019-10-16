@@ -10,8 +10,12 @@ let g:ale_php_phan_executable = '/home/developer/.composer/vendor/bin/phan'
 let g:ale_php_phpcs_executable = '/home/developer/.composer/vendor/bin/phpcs'
 let g:ale_php_langserver_use_global = 1 
 
+"let g:ale_fixers = {
+"\   'php': ['php_cs_fixer', 'prettier'],
+"\}
+
 let g:ale_fixers = {
-\   'php': ['php_cs_fixer'],
+\   'php': ['prettier'],
 \}
 
 let g:ale_linters = {

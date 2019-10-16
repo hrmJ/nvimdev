@@ -5,5 +5,12 @@
   "python.linting.lintOnSave": true,
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": true,
-  "tsserver.npm": "/home/developer/.nvm/versions/node/v10.16.2/bin/npm"
+  "tsserver.npm": "/home/developer/.nvm/versions/node/v10.16.2/bin/npm",
+  "languageserver": {
+    "phplang": {
+      "command": "php",
+      "args": ["/home/developer/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php"],
+      "filetypes": ["php"]
+    }
+  }
 }
